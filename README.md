@@ -42,11 +42,11 @@ firebase deploy
 ## 🗂 Project Structure
 /public        - 靜態資源與 PWA manifest    
 /src     
-  /api         - Firebase Functions       
-  /components  - 可重用元件（遊戲卡、列表、播放器…）        
-  /pages       - 主頁、遊戲詳情、公告頁等        
-  /redux       - Redux slices        
-  index.tsx        
+/api         - Firebase Functions       
+　　/components  - 可重用元件（遊戲卡、列表、播放器…）        
+　　/pages       - 主頁、遊戲詳情、公告頁等        
+　　/redux       - Redux slices        
+　　index.tsx        
 /firebase.json        
 /tsconfig.json        
 /package.json        
