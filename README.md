@@ -1,10 +1,12 @@
-# GameHub-V2
+# GameHub
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://gamthub-v2.web.app)  
-[![Deploy Status](https://img.shields.io/badge/deploy-passing-blue)](https://gamthub-v2.web.app)
+<div align="center">
+  [![Live Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://gamthub-v2.web.app)  
+　[![Deploy Status](https://img.shields.io/badge/deploy-passing-blue)](https://gamthub-v2.web.app)
+</div>
 
 ## 📌 About
-簡介 GameHub‑V2 的核心用途與特色功能。
+簡介 GameHub 的核心用途與特色功能。
 
 ## 🚀 Features
 - 遊戲資料瀏覽：標題、封面、分級、類型、敘述、截圖。
