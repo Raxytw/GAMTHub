@@ -1,12 +1,18 @@
 # GameHub
 
-<div align="center">
-  [![Live Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://gamthub-v2.web.app)  
-　[![Deploy Status](https://img.shields.io/badge/deploy-passing-blue)](https://gamthub-v2.web.app)
-</div>
-
 ## 📌 About
 簡介 GameHub 的核心用途與特色功能。
+
+<div align="center">
+  <p align="center">
+    <a href="https://gamthub-v2.web.app">
+      <img src="https://img.shields.io/badge/demo-online-brightgreen" alt="Live Demo">
+    </a>
+    <a href="https://gamthub-v2.web.app">
+      <img src="https://img.shields.io/badge/deploy-passing-blue" alt="Deploy Status">
+    </a>
+  </p>
+</div>
 
 ## 🚀 Features
 - 遊戲資料瀏覽：標題、封面、分級、類型、敘述、截圖。
