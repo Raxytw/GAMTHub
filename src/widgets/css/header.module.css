@@ -1,0 +1,158 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    z-index: 98;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    top: -80px;
+    transition: 1s;
+}
+
+.header.fadeIn {
+    transition: .5s;
+    top: 0;
+}
+
+.header.active,
+.header.show {
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+.header.active div h1,
+.header.show div h1 {
+    opacity: 1;
+    color: var(--gamt-color-1);
+}
+
+.header.active div h1 span,
+.header.show div h1 span {
+    transition: .5;
+    color: var(--gamt-color-2);
+}
+
+.header.active div ul li a,
+.header.show div ul li a {
+    color: var(--text-color);
+    opacity: 1;
+}
+
+.header div {
+    margin: 10px 20px;
+}
+
+.header div h1 {
+    opacity: .5;
+}
+
+.header div.logo {
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.header div.logo div {
+    width: 40px;
+    height: 40px;
+}
+
+.header div.logo div img {
+    width: 100%;
+    height: 100%;
+}
+
+.header div ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header div ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.header div ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    opacity: .5;
+    transition: .5s;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header div ul li.err a {
+    color: red;
+}
+
+.header div ul li a svg {
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.header div ul li.active a {
+    color: var(--gamt-color-2);
+}
+
+.header div ul li a.discord {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    color: var(--discord-color);
+}
+
+.header div ul li a.discord svg {
+    margin: 0;
+    font-size: 18px;
+}
+
+.header div ul li a:hover {
+    opacity: 1;
+}
+
+.header div ul li a.discord:hover {
+    animation: jello 1s;
+}
+
+@keyframes jello {
+
+    from,
+    11.1%,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    22.2% {
+        transform: skewX(-12.5deg) skewY(-12.5deg);
+    }
+
+    33.3% {
+        transform: skewX(6.25deg) skewY(6.25deg);
+    }
+
+    44.4% {
+        transform: skewX(-3.125deg) skewY(-3.125deg);
+    }
+
+    55.5% {
+        transform: skewX(1.5625deg) skewY(1.5625deg);
+    }
+
+    66.6% {
+        transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    }
+
+    77.7% {
+        transform: skewX(0.390625deg) skewY(0.390625deg);
+    }
+
+    88.8% {
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    }
+}

@@ -1,0 +1,55 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.cardbox {
+    text-align: center;
+}
+
+.cardbox h1 {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.cardbox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cardbox ul li {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.cardbox p {
+    color: #333;
+    margin-top: 20px;
+}
+
+.cardbox button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.cardbox button:hover {
+    background-color: #cc0000;
+}
