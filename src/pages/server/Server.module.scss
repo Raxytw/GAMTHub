@@ -1,0 +1,159 @@
+@import '../../media.scss';
+
+.main {
+    position: relative;
+    width: 100vw;
+
+    .title {
+        padding-top: 20px;
+        margin-left: 90px;
+        display: flex;
+        align-items: end;
+
+        @include media-large {
+            margin-left: 20px;
+        }
+
+        h3 {
+            margin-bottom: 5px;
+        }
+    }
+
+    .total {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 90px;
+
+        @include media-large {
+            margin-left: 20px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+    }
+
+    .users {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+
+        .group {
+            position: relative;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 20px;
+            padding-bottom: 20px;
+
+            @include media-lllarge {
+                grid-gap: 10px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            @include media-llarge {
+                grid-gap: 10px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include media-large {
+                grid-gap: 10px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            li {
+                position: relative;
+                padding: 10px 5px 10px 5px;
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 5px;
+                    height: 100%;
+                }
+
+                &.idle {
+                    &::before {
+                        background: #ff983f;
+                    }
+                }
+
+                &.online {
+                    &::before {
+                        background: #61bc84;
+                    }
+                }
+
+                &.dev {
+                    svg {
+                        color: #dd6236;
+                    }
+                }
+
+                &.bot {
+                    svg {
+                        color: #c8c8c8;
+                    }
+                }
+
+                &.fox {
+                    svg {
+                        color: orange;
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                    right: 20px;
+                }
+
+                @include media-large {
+                    width: 96%;
+                }
+
+                @include media-lllarge {
+                    width: 90%;
+                }
+
+                list-style: none;
+                display: flex;
+                align-items: center;
+                background: #ececec;
+                box-shadow: 18px 12px 13px -5px rgba(0, 0, 0, 0.1);
+                color: #1d1e22;
+                font-weight: bold;
+                border-radius: 5px;
+
+                .img {
+                    margin-left: 10px;
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+
+                h3 {
+                    margin-left: 15px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowarp;
+                }
+            }
+        }
+    }
+
+    >p {
+        margin-left: 40px;
+    }
+}

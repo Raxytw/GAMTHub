@@ -1,0 +1,414 @@
+@import '../../media.scss';
+
+.main {
+    position: relative;
+    width: 100%;
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 85vh;
+        display: flex;
+        align-items: center;
+
+        @include media-large {
+            justify-content: center;
+        }
+
+        .cardbg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: url('../../../public/images/Mario_live.gif') no-repeat center center;
+
+            p {
+                position: absolute;
+                right: 30px;
+                bottom: 10px;
+                color: var(--text-color-cr);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .2;
+                z-index: 1;
+            }
+        }
+
+        .cardbox {
+            position: relative;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            margin-left: 60px;
+            border-radius: 5px;
+            color: #fff;
+            z-index: 2;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            @include media-large {
+                margin-left: 0;
+            }
+
+            p {
+                margin-top: 5px;
+            }
+
+            a {
+                padding: 5px 10px 5px 10px;
+                text-decoration: none;
+                color: #fff;
+                border-radius: 5px;
+                background: var(--theme-2);
+            }
+
+            h1 {
+                font-size: 6.5rem;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1);
+
+                @include media-large {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        padding-top: 60px;
+
+        .server {
+            position: relative;
+            width: 100%;
+            margin-top: 60px;
+
+            @include media-large {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            >h1 {
+                position: relative;
+                margin-left: 100px;
+                z-index: 5;
+
+                @include media-large {
+                    margin-left: 0px;
+                    margin-bottom: 40px;
+                    font-size: 36px;
+                }
+            }
+
+            .msg {
+                position: relative;
+                width: 100%;
+                margin: 20px 0 10px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @include media-large {
+                    margin: 5px 0 10px 0;
+                }
+
+                .cc {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                    div {
+                        position: relative;
+                        width: 500px;
+                        height: 500px;
+
+                        @include media-large {
+                            width: 200px;
+                            height: 200px;
+                        }
+
+                        &:nth-child(1) {
+                            background: #71c4ef;
+                            border-radius: 55% 45% 80% 20% / 45% 38% 62% 55%;
+                            transform: translate(-50px, -50px);
+
+                        }
+
+                        &:nth-child(2) {
+                            background: #dd6236;
+                            border-radius: 25% 75% 29% 71% / 45% 42% 58% 55%;
+                            transform: translate(1250px, -190px);
+
+                            @include media-large {
+                                transform: translate(200px, 100px);
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            background: #00668c;
+                            border-radius: 27% 73% 7% 93% / 63% 84% 16% 37%;
+                            transform: translate(-50px, -200px);
+
+                            @include media-large {
+                                transform: translate(-25px, 150px);
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            background: #6c35de;
+                            border-radius: 67% 33% 84% 16% / 74% 71% 29% 26%;
+                            transform: translate(1250px, -500px);
+
+                            @include media-large {
+                                transform: translate(200px, 400px);
+                            }
+                        }
+                    }
+                }
+
+                .show1,
+                .show2 {
+                    position: relative;
+                    width: 90%;
+                    display: flex;
+
+                    @include media-large {
+                        flex-direction: column;
+                    }
+
+                    .img {
+                        position: relative;
+                        width: 70%;
+                        margin-right: 20px;
+                        overflow: hidden;
+                        border-radius: 15px;
+
+                        @include media-large {
+                            width: 100%;
+                        }
+
+                        img {
+                            position: relative;
+                            width: 100%;
+                        }
+                    }
+
+                    .chat {
+                        position: relative;
+                        width: 40%;
+
+                        @include media-large {
+                            width: 100%;
+                        }
+
+                        h1 {
+                            margin-left: 20px;
+                            margin-top: 35px;
+                            font-size: 40px;
+
+                            span {
+                                color: var(--theme-1);
+                            }
+
+                            @include media-large {
+                                font-size: 28px;
+                                margin-top: 30px;
+                                margin-left: 0px;
+                            }
+
+                            @include media-llarge {
+                                font-size: 32px;
+                                margin-top: 10px;
+                                margin-left: 20px;
+                            }
+                        }
+
+                        p {
+                            margin-left: 20px;
+                            margin-top: 20px;
+                            font-size: 30px;
+
+                            @include media-llarge {
+                                font-size: 24px;
+                                margin-top: 10px;
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .show2 {
+                    margin-top: 120px;
+                }
+            }
+        }
+
+        .dymic {
+            position: relative;
+            width: 100%;
+            height: 80px;
+
+            @include media-large {
+                height: 80px;
+            }
+
+            margin-top: 320px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+            overflow: hidden;
+
+            .marquee {
+                white-space: nowrap;
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+
+                div {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 200px;
+                    height: 100%;
+                    left: 100%;
+                    animation-name: scroll;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-duration: 30s;
+
+                    @include media-large {
+                        animation-duration: 40s;
+                    }
+
+                    @include media-llarge {
+                        animation-duration: 35s;
+                    }
+
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+                    @for $i from 1 through 8 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: calc(30s / 8 * (8 - $i) * -1);
+
+                            @include media-large {
+                                animation-delay: calc(40s / 8 * (8 - $i) * -1);
+                            }
+                        }
+                    }
+
+                    span {
+                        margin: 0 10px 0 10px;
+                        font-weight: bold;
+                        font-size: 36px;
+                        letter-spacing: 2px;
+                        opacity: .6;
+                        color: #fff;
+
+                        @include media-large {
+                            font-size: 16px;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+
+                    svg {
+                        margin: 0 10px 0 10px;
+                        font-size: 36px;
+                        opacity: .6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include media-large {
+                            font-size: 16px;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+
+                    &.hide {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        .imgbox {
+            margin-top: 20px;
+
+            @include media-large {
+                margin-top: 0;
+            }
+
+            position: relative;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+
+            .group {
+                position: relative;
+                width: 80%;
+                margin: 20px auto;
+                columns: 3;
+                column-gap: 20px;
+
+                @include media-large {
+                    columns: 2;
+                    width: 90%;
+                }
+
+                .item {
+                    padding: 5px;
+                    position: relative;
+                    width: 100%;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    box-shadow: 18px 12px 13px -5px rgba(0, 0, 0, 0.1);
+                    background: #ececec;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+
+                    video {
+                        position: relative;
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    to {
+        left: -200px;
+    }
+}

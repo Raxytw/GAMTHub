@@ -1,0 +1,91 @@
+@import "../../media.scss";
+
+.main {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px -12px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+
+    .box {
+        position: relative;
+        width: 80%;
+        height: 100%;
+
+        h1 {
+            margin: 30px 0 10px 0;
+        }
+
+        .us {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            hr {
+                position: relative;
+                margin: 10px 0;
+                width: 50%;
+            }
+
+            p {
+                position: relative;
+                width: 50%;
+                margin-bottom: 10px;
+
+                @include media-large {
+                    width: 100%;
+                }
+            }
+
+            div {
+                position: relative;
+                width: 100%;
+
+                @include media-large {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                }
+
+                img {
+                    position: absolute;
+                    right: 0;
+                    bottom: 20px;
+                    width: 200px;
+                    height: 200px;
+                    transform: scaleX(-1);
+
+                    @include media-large {
+                        position: relative;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+        hr {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .link {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+
+            @include media-large {
+                justify-content: center;
+            }
+
+            p {
+                position: relative;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+}

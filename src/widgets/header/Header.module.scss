@@ -1,0 +1,196 @@
+@import '../../media.scss';
+
+.main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: .5s;
+    height: 70px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--background);
+
+    &::before {
+        content: '';
+        position: absolute;
+        transition: .5s;
+        width: 90%;
+        height: 1px;
+        background: var(--background-b);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .left {
+        position: relative;
+        display: flex;
+
+        h1 {
+            margin-right: 20px;
+            transition: .5s;
+            margin-left: 50px;
+
+            @include media-large {
+                font-size: 24px;
+                margin-right: 10px;
+                margin-left: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--text-color);
+
+                span {
+                    color: var(--theme-2);
+                }
+            }
+        }
+
+        >.nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ul {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                transition: .5s;
+                transform: translateY(5px);
+
+                @include media-large {
+                    transform: translateY(2px);
+                }
+
+                li {
+                    list-style: none;
+
+                    h4 {
+                        @include media-large {
+                            font-size: 14px;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: var(--text-color);
+                        }
+                    }
+
+                    &:not(:first-child) {
+                        margin-left: 10px;
+                    }
+
+                    &.this {
+                        h4 {
+                            a {
+                                font-weight: bold;
+                                color: var(--theme-2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .phone {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+
+            div {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                right: 0px;
+                background: #fff;
+                cursor: pointer;
+
+                &:hover {
+                    background: #ececec;
+                }
+
+                svg {
+                    font-size: 24px;
+                }
+            }
+
+            ul {
+                position: fixed;
+                width: 100vw;
+                background: #fff;
+                left: 0;
+                top: 70px;
+
+                &.hide {
+                    display: none;
+                }
+
+                li {
+                    padding: 10px 10px 10px 10px;
+                    position: relative;
+                    width: 100%;
+                    list-style: none;
+
+                    a {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        color: var(--text-color);
+                        text-decoration: none;
+                        margin-left: 20px;
+                        text-wrap: nowrap;
+                    }
+
+                    &.this {
+                        background: #dbdbdb;
+
+                        a {
+                            color: var(--theme-2);
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        position: relative;
+        margin-right: 80px;
+
+        a {
+            position: relative;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--theme-2);
+            background: #ececec;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 10px #1d1e1c57;
+            transition: .5s;
+
+            &:hover {
+                background: #e9e9e9;
+                box-shadow: 0 0 10px #1d1e1c81;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+
+        @include media-large {
+            margin-right: 20px;
+        }
+    }
+}

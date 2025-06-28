@@ -1,0 +1,273 @@
+@import '../../media.scss';
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include media-large {
+        flex-direction: column;
+    }
+
+    .list {
+        position: relative;
+        width: 15%;
+        height: 80%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 37px 19px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 10px;
+
+        @include media-large {
+            width: 90%;
+            height: 30%;
+        }
+
+        h2 {
+            position: relative;
+            width: 80%;
+            margin: 10px;
+
+            @include media-large {
+                font-size: 18px;
+            }
+        }
+
+        ul {
+            position: relative;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            width: 80%;
+            max-height: 250px;
+            list-style: none;
+            transition: .5s;
+            outline: 2px dashed transparent;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            @include media-large {
+                max-height: 40px;
+                margin: 2px 0;
+            }
+
+            li {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                border-radius: 5px;
+                margin: 2px 0;
+                transition: .5s;
+
+                svg {
+                    position: absolute;
+                    right: 20px;
+                    font-size: 24px;
+                    opacity: 0;
+                    color: #1d1e22;
+                    transition: .5s;
+                    cursor: pointer;
+                }
+
+                p {
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    padding: 15px;
+                    box-shadow: 0px 0px 37px 19px rgba(0, 0, 0, 0.1);
+
+                    &.empty {
+                        padding: 10px;
+                        box-shadow: none;
+                    }
+                }
+
+                &.remove {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+
+                &.new {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                    animation: fadeIn 0.5s forwards;
+                }
+            }
+
+            &.dragOver {
+                outline: 2px dashed #00668c;
+            }
+
+            &.black {
+                li {
+                    &:hover {
+                        svg {
+                            opacity: 1;
+                            color: #FF3D3D;
+                        }
+                    }
+                }
+            }
+
+            &.white {
+                li {
+                    svg {
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        svg {
+                            opacity: 1;
+                            color: #71c4ef;
+                        }
+                    }
+                }
+            }
+        }
+
+        .input {
+            position: absolute;
+            width: 90%;
+            padding: 10px 0;
+            bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                position: relative;
+                width: 99%;
+                height: 30px;
+                border: none;
+                background: #e0e0e0;
+                padding-left: 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .ui {
+        position: relative;
+        width: 60%;
+        height: 80%;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0px 0px 37px 19px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 10px;
+
+        @include media-large {
+            width: 90%;
+            height: 60%;
+        }
+
+        .uConfetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9;
+
+            canvas {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .view {
+            position: relative;
+            width: 100%;
+            padding: 15% 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            font-weight: bold;
+            text-shadow: 0px 0px 50px #71c4ef;
+
+            @include media-large {
+                padding: 35% 0;
+            }
+        }
+
+        .cmd {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: -5px 0px 37px 19px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+
+            button {
+                border: none;
+                background: #e0e0e0;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.loader {
+    position: relative;
+    width: 80%;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .line {
+        position: relative;
+        width: 40%;
+        height: 100%;
+        background-color: #6A00FF;
+        border-radius: 2.5px;
+        z-index: 0;
+        margin-left: -40%;
+        animation: go 1s infinite;
+    }
+}
+
+@keyframes go {
+    from {
+        margin-left: -100%;
+        width: 40%;
+    }
+
+    to {
+        width: 20%;
+        margin-left: 110%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

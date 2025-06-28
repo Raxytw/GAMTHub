@@ -1,0 +1,30 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    color: #1d1e22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ti {
+        position: relative;
+        padding: 10px;
+
+        img {
+            position: relative;
+            width: 50%;
+        }
+
+        hr {
+            position: relative;
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--theme-2);
+        }
+    }
+}
