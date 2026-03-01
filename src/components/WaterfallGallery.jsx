@@ -95,22 +95,10 @@ const WaterfallGallery = () => {
   /*  ========================
       獲取基本資訊
   ==========================*/
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const res = await makeRequest("GET", "/api/image?type=img,video,link");
-  //       setBasicInfo(res);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-  //   getData();
-  // }, [])
-
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await makeRequest("GET", "https://gamt-api.vercel.app/api/private/GetDiscordImage");
+        const res = await makeRequest("GET", "https://gamt-api.vercel.app/api/query/v3-image?type=img,video,link");
         setItems(res.data);
         setIsLoading(false);
       } catch (error) {
@@ -119,6 +107,19 @@ const WaterfallGallery = () => {
     }
     getData();
   }, [])
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const res = await makeRequest("GET", "https://gamt-api.vercel.app/api/private/GetDiscordImage");
+  //       setItems(res.data);
+  //       setIsLoading(false);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+  //   getData();
+  // }, [])
 
   const skeletonHeights = ['h-48', 'h-64', 'h-40', 'h-80', 'h-56'];
 
