@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,6 +50,10 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.19"
+    "customize-cra": "^1.0.0",
+    "javascript-obfuscator": "^5.3.0",
+    "react-app-rewired": "^2.2.1",
+    "tailwindcss": "^3.4.19",
+    "webpack-obfuscator": "^3.6.0"
   }
 }
