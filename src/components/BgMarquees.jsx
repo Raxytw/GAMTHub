@@ -1,15 +1,31 @@
+import { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSteam } from "@fortawesome/free-brands-svg-icons";
 import { faDiceD6, faShareNodes, faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 
 export default function BgMarquees({ gradient = false }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // 判斷是否為手機端，如果是則不渲染背景跑馬燈以節省效能與記憶體
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const iconList = [
     { name: "通話", icon: faVolumeHigh },
     { name: "遊戲", icon: faDiceD6 },
     { name: "分享", icon: faShareNodes },
     { name: "聊天", icon: faSteam }
   ];
+
+  // 手機端不顯示背景跑馬燈
+  if (isMobile) return null;
 
   return (
     <div className="fixed inset-0 -z-10 flex items-center justify-center overflow-hidden pointer-events-none select-none">
