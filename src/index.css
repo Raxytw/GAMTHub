@@ -10,7 +10,23 @@
   font-family: 'GenSenRoundedTW', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+}
+
+@media (min-width: 769px) {
+  * {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+
+  html,
+  body,
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
 }
 
 :root {
@@ -23,12 +39,11 @@
 body {
   background: var(--background);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 #root {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   color: var(--text-color);
-  overflow-x: hidden;
 }
